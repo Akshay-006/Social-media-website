@@ -1,0 +1,115 @@
+/* Social Media Navbar Styling */
+:root {
+    --navbar-background: #ffffff;
+    --navbar-text: #1c1e21;
+    --navbar-hover: #1877f2;
+    --navbar-active: #166fe5;
+    --navbar-border: #e4e6eb;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--navbar-background);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 15px 20px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--navbar-text);
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-links a:hover {
+    background-color: rgba(24, 119, 242, 0.1);
+    color: var(--navbar-hover);
+}
+
+.nav-links a.active {
+    color: var(--navbar-active);
+    font-weight: 600;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--navbar-hover);
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Logo or Brand Section */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--navbar-hover);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .nav-links a {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --navbar-background: #242526;
+        --navbar-text: #e4e6eb;
+        --navbar-hover: #3a82f7;
+        --navbar-active: #4a90e2;
+        --navbar-border: #393a3b;
+    }
+
+    .navbar-container {
+        background-color: var(--navbar-background);
+        border-bottom: 1px solid var(--navbar-border);
+    }
+}

@@ -1,0 +1,33 @@
+# --- CLIENT ignores ---
+client/node_modules/
+client/.pnp
+client/.pnp.js
+
+# Client testing
+client/coverage/
+
+# Client production build
+client/build/
+
+# Client environment files
+client/.env.local
+client/.env.development.local
+client/.env.test.local
+client/.env.production.local
+
+# --- SERVER ignores ---
+server/node_modules/
+
+# Server build or dist (if using TypeScript)
+server/build/
+server/dist/
+
+# Server environment files
+server/.env
+server/.env.local
+
+# --- General ---
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
