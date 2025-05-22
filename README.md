@@ -63,8 +63,7 @@ git clone https://github.com/your-username/podia.git
 
 2. Setup Backend
 bash
-Copy
-Edit
+
 cd server
 npm install
 
